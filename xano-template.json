@@ -1,0 +1,34 @@
+{
+  "$schema": "https://xano.com/schemas/community-template.v1.json",
+  "name": "Discord Webhook",
+  "slug": "discord-webhook",
+  "category": "integration",
+  "version": "0.1.0",
+  "description": "Xano functions that post text messages and rich embeds to Discord via incoming webhooks.",
+  "tags": ["integration", "discord", "webhook", "notifications"],
+  "author": {
+    "name": "Xano Community",
+    "url": "https://github.com/xano-community"
+  },
+  "xano": {
+    "min_version": "2.0.0",
+    "components": {
+      "tables": [],
+      "api_groups": [],
+      "functions": ["discord/post_message", "discord/post_embed"],
+      "tasks": []
+    }
+  },
+  "import": {
+    "backend_path": "."
+  },
+  "env": [
+    {
+      "name": "DISCORD_WEBHOOK_URL",
+      "description": "Default Discord channel webhook URL. Optional — the webhook URL can also be passed as a function input.",
+      "required": false,
+      "example": "https://discord.com/api/webhooks/000000000000000000/xxxxxxxxxxxx"
+    }
+  ],
+  "license": "MIT"
+}
